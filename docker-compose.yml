@@ -74,7 +74,7 @@ services:
       - traefik.http.routers.${PROJECT_NAME}.rule=Host("${DOMAIN}")
       - traefik.http.routers.${PROJECT_NAME}.entrypoints=websecure
       - traefik.http.routers.${PROJECT_NAME}.tls=true
-      - traefik.docker.network=proxy
+      - traefik.docker.network=coolify
       - traefik.http.services.${PROJECT_NAME}.loadbalancer.server.port=80
 
       - ./conf/nginx:/conf/
@@ -131,6 +131,7 @@ services:
     environment:
       - OPENSEARCH_HOSTS=${OPENSEARCH_HOSTS:-http://opensearch:9200}
       - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true"
+      - "opensearch_security.multitenancy.enabled=false"
       - SERVER_BASEPATH=/opensearch
       - SERVER_REWRITEBASEPATH=true
     volumes:

@@ -145,7 +145,7 @@ networks:
     name: "${PROJECT_NAME:-openimis}-net"
   proxy:
     name: coolify
-    external: true
+    external: false
 volumes:
   database:
   photos:

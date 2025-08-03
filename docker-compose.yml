@@ -56,8 +56,7 @@ services:
       - NEW_OPENIMIS_HOST=${DOMAIN}
       - OPENIMIS_CONF_JSON=${OPENIMIS_FE_CONF_JSON}
       - OPENSEARCH_BASIC_TOKEN=${OPENSEARCH_BASIC_TOKEN}
-    networks:
-      proxy:
+    networks: 
       openimis-net:
     depends_on:
       - backend

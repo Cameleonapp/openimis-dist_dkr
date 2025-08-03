@@ -142,7 +142,7 @@ services:
 networks:
   openimis-net: 
     name: coolify
-    external: true
+    external: false
 volumes:
   database:
   photos:

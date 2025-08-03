@@ -143,8 +143,7 @@ services:
 networks:
   openimis-net:
     name: "${PROJECT_NAME:-openimis}-net"
-  proxy:
-    name: coolify
+  proxy: 
     external: false
 volumes:
   database:

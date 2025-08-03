@@ -138,6 +138,17 @@ services:
       - "./conf/opensearch/opensearch.yml:/usr/share/opensearch-dashboards/config/opensearch.yml"
     networks:
       openimis-net:
+    #to remove if not work
+    labels:
+    - traefik.enable=true
+    - traefik.http.routers.opensearch-dash.rule=Host(`${DOMAIN}`) && PathPrefix(`/opensearch`)
+    - traefik.http.routers.opensearch-dash.entrypoints=websecure
+    - traefik.http.routers.opensearch-dash.tls=true
+    - traefik.http.routers.opensearch-dash.priority=20
+    - traefik.docker.network=coolify
+    - traefik.http.services.opensearch-dash.loadbalancer.server.port=5601
+    - traefik.http.middlewares.opensearch-strip.stripprefix.prefixes=/opensearch
+    - traefik.http.routers.opensearch-dash.middlewares=opensearch-strip
 
 
 networks:

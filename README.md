@@ -106,3 +106,44 @@ pass it into the corresponding test command with `-- --config "baseUrl=http://lo
 
 Headless: `npx cypress run -- --config "baseUrl=http://localhost:3000"`
 Headed: `npx cypress open -- --config "baseUrl=http://localhost:3000"`
+
+
+
+BE_TAG=25.04
+CACHE_BACKEND=django.core.cache.backends.redis.RedisCache
+CACHE_OPTIONS={}
+CACHE_URL=redis://default:itzvqfp4p6M1f8rDSnlIh8PRWRqPHJow0Y2b4cCxqVAeWkMZt2wNH413mdHsp16x@65.108.219.244:6379
+CLUSTER_NAME=my_opensearch_cluster
+CSRF_TRUSTED_ORIGINS=https://openimis.app.cameleonapp.com,http://openimis.app.cameleonapp.com,https://opensearch.app.cameleonapp.com,http://opensearch.app.cameleonapp.com/
+DB_DEFAULT=postgresql
+DB_HOST=db
+DB_NAME=IMIS
+DB_PASSWORD=IMISuserP@s
+DB_PORT=5432
+DB_TAG=25.04
+DB_USER=IMISuser
+DEMO_DATASET=true
+DISCOVERY_TYPE=single-node
+DJANGO_LOG_HANDLER=debug-log
+DJANGO_LOG_LEVEL=WARNING
+DJANGO_MIGRATE=True
+DOMAIN=openimis.app.cameleonapp.com
+FE_TAG=25.04
+GATEWAY_PORT_S=5443
+HOSTS=${DOMAIN}
+HTTPS_PORT=5443
+HTTP_PORT=580
+MODE=Prod
+OPENIMIS_FE_CONF_JSON=
+OPENSEARCH_ADMIN=admin
+OPENSEARCH_BASIC_TOKEN=Basic YWRtaW46Qjl3YzlWcnFYN3BZ
+OPENSEARCH_DSL_AUTOSYNC=True
+OPENSEARCH_HOST=opensearch
+OPENSEARCH_HOSTS=["http://opensearch.app.cameleonapp.com:9200"]
+OPENSEARCH_PASSWORD=B9wc9VrqX7pY
+OPEN_SEARCH_HTTP_PORT=9200
+PROJECT_NAME=eyone4
+REDIS_PASSWORD=redisUserPass123
+SECRET_KEY=@,?&#"/uXv{`Rjxj94@tz)s61$7YyP
+SITE_ROOT=api
+SLL_HTTP_ENABLED=false

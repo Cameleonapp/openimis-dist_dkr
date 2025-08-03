@@ -131,7 +131,7 @@ services:
     environment:
       - OPENSEARCH_HOSTS=${OPENSEARCH_HOSTS:-http://opensearch:9200}
       - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true"
-      - "opensearch_security.multitenancy.enabled=false"
+      #- "opensearch_security.multitenancy.enabled=false"
       - SERVER_BASEPATH=/opensearch
       - SERVER_REWRITEBASEPATH=true
     volumes:

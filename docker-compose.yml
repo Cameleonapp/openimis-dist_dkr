@@ -106,7 +106,7 @@ services:
     networks:
       openimis-net:
   opensearch:
-    image: opensearchproject/opensearch:2.19.3
+    image: opensearchproject/opensearch:latest
     env_file:
       - ".env.openSearch"
     environment:
@@ -127,7 +127,7 @@ services:
     networks:
       openimis-net:
   opensearch-dashboards:
-    image: opensearchproject/opensearch-dashboards:2.9.0
+    image: opensearchproject/opensearch-dashboards:latest
     environment:
       - OPENSEARCH_HOSTS=${OPENSEARCH_HOSTS:-http://opensearch:9200}
       - "DISABLE_SECURITY_DASHBOARDS_PLUGIN=true"
